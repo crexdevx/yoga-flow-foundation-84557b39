@@ -3,6 +3,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroPosterImg from "@/assets/yoga-hero-poster.jpg";
 import heroWebm from "@/assets/yoga-hero.webm.asset.json";
 import heroMp4 from "@/assets/yoga-hero.mp4.asset.json";
+import { FloatingHeader } from "@/components/floating-header";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,6 +46,7 @@ function Index() {
         <source src={heroWebm.url} type="video/webm" />
         <source src={heroMp4.url} type="video/mp4" />
       </video>
+      <FloatingHeader />
     </section>
   );
 }
